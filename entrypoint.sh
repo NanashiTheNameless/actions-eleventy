@@ -6,7 +6,7 @@ if [ "$INPUT_INSTALL_DEPENDENCIES" = "true" ]; then
 fi
 
 
-if [ "$INPUT_UPDATE_DEPENDENCIES" = "true" ]; then
+if [ "$INPUT_UPDATE_NPM" = "true" ]; then
   echo "Running \`npm update\` and \`npm update -g\`"
   npm update
   npm update -g
