@@ -27,17 +27,19 @@ jobs:
 
 This action accepts a couple of optional inputs:
 
-| Input Name             | Required? | Default | Description                                                            |
-| ---------------------- | :-------: | :-----: | ---------------------------------------------------------------------- |
-| `args`                 |    No     |  `""`   | Arguments to pass to the Eleventy invocation                           |
-| `install_dependencies` |    No     | `false` | If set to `true`, `npm install` will be run before Eleventy is invoked |
+| Input Name             | Required? | Default | Description                                                                               |
+| ---------------------- | :-------: | :-----: | ----------------------------------------------------------------------------------------- |
+| `args`                 |    No     |  `""`   | Arguments to pass to the Eleventy invocation                                              |
+| `install_dependencies` |    No     | `false` | If set to `true`, `npm install` will be run before Eleventy is invoked                    |
+| `update_npm`           |    No     | `false` | If set to `true`, `npm update` and `npm update -g` will be run before Eleventy is invoked |
 
 For example:
 
 ```yaml
 - name: Build
-  uses: cjerrington/actions-eleventy@v1.3
+  uses: cjerrington/actions-eleventy@master
   with:
     args: '--output=_dist'
     install_dependencies: true
+    update_npm: true
 ```
