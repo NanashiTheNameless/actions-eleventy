@@ -9,6 +9,10 @@ inputs:
     description: 'If set to `true`, `npm install` will be run before Eleventy is invoked'
     required: false
     default: false
+  update_npm:
+    description: 'If set to `true`, `npm update` and `npm update -g` will be run before Eleventy is invoked'
+    required: false
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
